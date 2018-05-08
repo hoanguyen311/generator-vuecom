@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <% if (htmlWebpackPlugin.options.isProd) { %>
+  <link async href="./index.css" rel="stylesheet">
+  <% } %>
+</head>
+<body>
+  <div id="container"></div>
+  <% if (htmlWebpackPlugin.options.isProd) { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <% } %>
+  <script async src="./index.js" ></script>
+</body>
+</html>
